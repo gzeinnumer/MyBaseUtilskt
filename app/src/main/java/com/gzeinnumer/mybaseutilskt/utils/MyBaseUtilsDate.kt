@@ -45,3 +45,11 @@ fun reformatDate(old: String, from: String, to: String): String {
     format = SimpleDateFormat(to)
     return if (newDate != null) format.format(newDate) else "Date formater error"
 }
+
+
+@SuppressLint("SimpleDateFormat")
+fun getCurrentTime(requestFormat: String?): String? {
+    val format = SimpleDateFormat(requestFormat) //dd/MM/yyyy
+    val now = Date()
+    return format.format(now)
+}

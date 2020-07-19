@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        
+
         val value = "Wed, 18 Apr 2012 07:55:29 +0000"
 
         val reformatMultiArray: String = reformatDate(value, arrayOf(
@@ -35,5 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         val reformatOneString: String = reformatDate(value, "EEE, dd MMM yyyy hh:mm:ss Z", "MMM dd,yyyy hh:mm a")
         Log.d(TAG, "onCreate: $reformatOneString")
+
+        Log.d(TAG, "onCreate: ${getCurrentTime("yyyy-MM-dd")}")
     }
 }
